@@ -97,6 +97,10 @@ In this example we are storing the results in a directory called `Results_ISIC`.
 docker cp tloss-container:/app/Results_ISIC ./
 ```
 
+## TensorFlow Implementation
+
+A TensorFlow implementation of the T-Loss has been developed by [@andreped](https://github.com/andreped). 
+You can find the implementation in the repository [t-loss-tf](https://github.com/andreped/t-loss-tf).
 
 ## References
 If you find this repository useful for your research, please cite the following work.

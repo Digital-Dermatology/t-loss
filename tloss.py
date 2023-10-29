@@ -24,6 +24,9 @@ import numpy as np
 import torch
 import torch.nn as nn
 
+# NOTE: The mismatch between the paper and the code is because we offer a more general 
+# formulation where Sigma is an arbitrary diagonal matrix. 
+# For a detailed explanation, please refer to: https://github.com/Digital-Dermatology/t-loss/issues/2 
 
 class TLoss(nn.Module):
     def __init__(
@@ -52,6 +55,7 @@ class TLoss(nn.Module):
             dtype=torch.float,
             device=config.device,
         )
+ 
         self.lambdas = torch.ones(
             (self.config.data.image_size, self.config.data.image_size),
             dtype=torch.float,
